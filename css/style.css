@@ -1,0 +1,114 @@
+/* Generic 
+-------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Yeseva+One&display=block');
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #676767 /*{1. Body | Text colour}*/;
+}
+a, a:hover, a:active, .btn-link, .btn-link:hover {
+	color: #4f4f4f /*{1. Body | Link colour}*/;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h5, .h6 {
+	font-family: 'Expo', sans-serif /*{1. Body | Header font family}*/;
+	color: #363636 /*{1. Body | Header font colour}*/;
+}
+#h3-button {
+    font-family: 'Expo', sans-serif /*{1. Body | Header font family}*/;
+	color: #363636 /*{1. Body | Header font colour}*/;
+}
+/* Header 
+-------------------------------*/
+header {
+	background-color: rgba(252, 241, 29, 1) /*{2. Header | Background colour}*/;
+}
+header .header-topbar {
+	background-color: rgba(252, 241, 29, 1) /*{2. Header | Top bar background colour}*/;
+}
+header .header-topbar .navbar-nav a {
+	color: rgba(5, 5, 5, 1) /*{2. Header | Topbar link colour}*/;
+}
+.header-menu {
+	background-color: rgba(0, 0, 0, 1) /*{2. Header | Menu background colour}*/;
+}
+.header-menu .navbar-nav > li > a,
+.navbar-mobile a.nav-link {
+	color: rgba(245, 240, 240, 1) /*{2. Header | Menu link colour}*/;
+}
+header .btn-header i {
+    color: rgba(0, 0, 0, 1) /*{2. Header | Account/Cart/Search Icon colour}*/;
+}
+header .btn-header {
+	color: rgba(0, 0, 0, 1) /*{2. Header | Account/Cart/Search Link colour}*/;
+}
+/* Feature categories 
+-------------------------------*/
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {    
+		float: left;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {	
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+}
+.img-responsive {
+		display: block;
+		max-width: 100%;
+		height: auto;
+}
+/* Footer 
+-------------------------------*/
+.wrapper-footer {
+	background-color: rgba(0, 0, 0, 1) /*{3. Footer | Background color}*/;
+}
+.wrapper-footer h4 {
+	color: rgba(252, 241, 29, 1) /*{3. Footer | Heading colour}*/;
+}
+.wrapper-footer a, 
+.wrapper-footer a:hover, 
+.wrapper-footer a:active,
+.wrapper-footer * {
+	color: #edf1f3 /*{3. Footer | Text colour}*/;
+}
+footer .nav.list-social i {
+    color: rgba(252, 241, 29, 1) /*{3. Footer | Social icon colour}*/;
+}
+/* Buttons 
+-------------------------------*/
+/* Secondary button */
+.btn-outline-secondary, .btn-default {
+	color: rgba(250, 245, 245, 1) /*{4. buttons | default-btn-text-colour}*/;
+	background-color: rgba(0, 0, 0, 1) /*{4. buttons | default-btn-background-colour}*/;
+	border-color: #cccccc /*{4. buttons | default-btn-border-colour}*/;
+}
+.btn-outline-secondary:hover, .btn-default:hover,
+.btn-outline-secondary.disabled, .btn-default:disabled,
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle, .btn-default:not(:disabled):not(.disabled):active, .btn-default:not(:disabled):not(.disabled).active, .show > .btn-default.dropdown-toggle {
+	color: rgba(250, 250, 250, 1) /*{4. buttons | default-btn-text-colour-hover}*/;
+	background-color: rgba(0, 0, 0, 1) /*{4. buttons | default-btn-hover-background-colour}*/;
+	border-color: #adadad /*{4. buttons | default-btn-hover-border-colour}*/;
+}
+/* Primary button */
+.btn-primary {
+	color: rgba(0, 0, 0, 1) /*{4. buttons | primary-btn-text-colour}*/;
+	background-color: rgba(245, 238, 24, 1) /*{4. buttons | primary-btn-background-colour}*/;
+	border: 0;
+}
+.btn-primary:hover,
+.btn-primary.disabled, .btn-primary:disabled,
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+	color: #ffffff /*{4. buttons | primary-btn-hover-text-colour}*/;
+	background-color: rgba(17, 94, 237, 1) /*{4. buttons | primary-btn-hover-background-colour}*/;
+}
+/* Success button */
+.btn-success {
+	color: #ffffff /*{4. buttons | success-btn-text-colour}*/;
+	background-color: rgba(140, 136, 136, 1) /*{4. buttons | success-btn-background-colour}*/;
+	border: 0;
+}
+.btn-success:hover,
+.btn-success.disabled, .btn-success:disabled,
+.btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active, .show > .btn-success.dropdown-toggle {
+	color: rgba(250, 242, 242, 1) /*{4. buttons | success-btn-hover-text-colour}*/;
+	background-color: #4c4c4c /*{4. buttons | success-btn-hover-background-colour}*/;
+}

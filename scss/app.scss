@@ -1,0 +1,8 @@
+// Bootstrap and overides
+@import "./_variables";
+// Import bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+// Neto standard styles
+@import "node_modules/Skeletal/src/scss/_neto";
+// Custom styles
+@import "./_custom";
