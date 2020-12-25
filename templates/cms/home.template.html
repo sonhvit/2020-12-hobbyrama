@@ -1,0 +1,67 @@
+<!-- Banner Carousel -->
+<div class="col-12">
+	[%if [@config:show_home_ads@]%]
+		[%advert type:'text' template:'carousel' limit:'10' ad_group:''%]
+			[%param *header%]
+				<section id="homepageCarousel" class="mb-5 carousel slide" data-ride="carousel" aria-label="Banner images">
+					<div class="carousel-inner">
+			[%/param%]
+			[%param *footer%]
+					</div>
+					[%if [@total_showing@] > 1%]
+						<ol class="carousel-indicators">
+							[%site_value id:'counter' type:'load'/%]
+						</ol>
+					[%/if%]
+				</section>
+			[%/param%]
+			[%param *ifempty%]
+				<a class="neto-placeholder neto-placeholder-rotator btn-loads mb-5" data-loading-text="<i class='fa fa-spinner fa-spin' style='font-size: 14px'></i>" href="[@config:home_url@]/_cpanel?item=adw&page=view&id=New&plan_id=1">
+					Add a banner<br/>
+				</a>
+			[%/param%]
+		[%/advert%]
+
+<!-- Category Images -->
+ <div class="container"> <div class="row"> <div class="col-xs-12"> [%content_zone id:'feature_categories'%][%/content_zone%] </div> </div></div>
+ 
+	<p class="extraspace"></p>
+	
+	<!-- New Arrival Products -->
+[%thumb_list type:'products' template:'' filter_category:'' sortby:'new_arrivals' limit:'10'%]
+    [%param *header%]
+        <section class="row products-row" id="rowbgcolor" aria-label="New Arrival Products">
+            <div class="col-12 text-center my-3">
+                <p class="extraspace"></p>
+                <h1 class="mb-0">NEW ARRIVALS</h1>
+            </div>
+    [%/param%]
+    [%param *footer%]
+        </section>
+    [%/param%]
+[%/thumb_list%]
+
+<p class="extraspace"></p>
+
+	<!-- Most Popular Products -->
+[%thumb_list type:'products' template:'' filter_category:'' sortby:'top_sellers' limit:'10'%]
+    [%param *header%]
+        <section class="row products-row" id="rowbgcolor" aria-label="Popular Products">
+            <div class="col-12 text-center my-3">
+                <p class="extraspace"></p>
+                <h1>BEST SELLERS</h1>
+            </div>
+    [%/param%]
+    [%param *footer%]
+        </section>
+    [%/param%]
+[%/thumb_list%]
+
+<!-- Home Page Text -->
+	[%if [@page_content@]%]
+		<hr class="mb-5">
+		<section id="homepage-content" class="n-responsive-content text-center" aria-label="Main Description">[@page_content@]</section>
+	[%/if%]
+</div>
+
+
