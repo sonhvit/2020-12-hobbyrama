@@ -122,6 +122,17 @@
 	<section class="header-menu">
 		<nav class="container navbar navbar-expand-md py-0">
 			<div class="collapse navbar-collapse" id="navbarMainMenu">
+				<div class="top-menu">
+					<a href="[@config:home_url@]" title="home"><i class="fa fa-home"></i>Home</a>
+					<span class="close-menu"><i class="fa fa-times"></i></span>
+				</div>
+				[%advert type:'text' limit:'1' ad_group:'announcement_bar' category:'0'%]
+				[%param *body%]
+				<div class="text-run">
+					<marquee>[@description@]</marquee>
+			   </div>
+				[%/param%]
+				[%/advert%]
 				<div class="header-search d-block d-md-none mb-2">
 					<form name="productsearch" method="get" action="/" role="search" aria-label="Product search">
 						<input type="hidden" name="rf" value="kw"/>
@@ -189,6 +200,11 @@
 									<a data-toggle="collapse" href="#mobMenu[@id@]" class="collapsed nav-link" role="button" aria-expanded="false" aria-controls="mobMenu[@id@]">[@name@]</a>
 									<ul id="mobMenu[@id@]" class="lvl2 collapse list-unstyled">
 										[@next_level@]
+										[%if [@next_level@]%]
+											<li class="nav-item">
+												<a href="[@url@]" class="nav-link txt-up">View all</a>
+											</li>
+										[%/if%]
 									</ul>
 								</li>
 							[%else%]
@@ -203,6 +219,11 @@
 									<a data-toggle="collapse" data-parent="#mobMenu[@parent_content_id@]" href="#mobMenu[@id@]" class="collapsed nav-link">[@name@]</a>
 									<ul id="mobMenu[@id@]" class="lvl3 collapse list-unstyled">
 										[@next_level@]
+										[%if [@next_level@]%]
+											<li class="nav-item">
+												<a href="[@url@]" class="nav-link txt-up">View all</a>
+											</li>
+										[%/if%]
 									</ul>
 								</li>
 							[%else%]

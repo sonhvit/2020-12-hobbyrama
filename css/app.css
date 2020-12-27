@@ -9220,6 +9220,36 @@
  #filters a.filter {
    padding: 8px 20px;
    font-size: 13px; }
+.top-menu,.text-run{
+    display: none;
+}
+#filters .content-list{
+    display: none;
+}
+#filters .content-list.active{
+    display: block;
+}
+#filters>.list-group>.list-group-item{
+    position: relative;
+    cursor: pointer;
+}
+#filters>.list-group>.list-group-item:after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('../img/ic-sidebar-plus.png') no-repeat scroll center;
+}
+#filters>.list-group>.list-group-item.active{
+    background: none;
+    border-color: #ccc; 
+}
+#filters>.list-group>.list-group-item.active:after{
+    background: url('../img/ic-sidebar-minus.png')no-repeat scroll center;
+}
 @media(max-width: 767px)   {
     .collapse:not(.show){
         display: none;
