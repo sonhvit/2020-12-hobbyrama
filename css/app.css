@@ -9079,7 +9079,7 @@
  
  /* Home page 
  -------------------------------*/
- #homepageCarousel .carousel-caption {
+ .wrap-carousel .carousel-caption {
    left: 0;
    top: 0;
    bottom: 0;
@@ -9100,23 +9100,23 @@
            justify-content: center;
    text-align: left; }
    @media (max-width: 767.98px) {
-     #homepageCarousel .carousel-caption {
+     .wrap-carousel .carousel-caption {
        display: block;
        top: auto;
        max-width: none; } }
-   #homepageCarousel .carousel-caption h1 {
+   .wrap-carousel .carousel-caption h1 {
      color: #fff; }
      @media (max-width: 767.98px) {
-       #homepageCarousel .carousel-caption h1 {
+       .wrap-carousel .carousel-caption h1 {
          margin: 0;
          font-size: 16px; } }
  
- #homepageCarousel .carousel-indicators {
+ .wrap-carousel .carousel-indicators {
    margin: 0;
    right: auto;
    bottom: 15px;
    padding-left: 3%; }
-   #homepageCarousel .carousel-indicators li {
+   .wrap-carousel .carousel-indicators li {
      width: 10px;
      height: 10px;
      border-radius: 50%; }
@@ -9250,9 +9250,50 @@
 #filters>.list-group>.list-group-item.active:after{
     background: url('../img/ic-sidebar-minus.png')no-repeat scroll center;
 }
+@media(min-width: 768px){
+  .d-mobile{
+    display: none;
+  }
+}
 @media(max-width: 767px)   {
+  .d-desktop{
+    display: none;
+  }
+  .home-slider{
+    width: 100%;
+    padding: 0px;
+  }
+  .home-slider img{
+    width: 100%;
+    object-fit: cover;
+    min-height: 410px;
+  }
+  .wrap-carousel{
+    position: relative;
+  }
+  .carousel-control{
+    display: inline-block;
+    width: 30px;
+    height: 57px;
+    background: url(../img/ic-next.png)no-repeat scroll center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .carousel-control.right{
+    left: 10px;
+    right: inherit;
+    transform: translateY(-50%) rotateY(-180deg);
+  }
     .collapse:not(.show){
         display: none;
+    }
+    .wrap-carousel .carousel-caption p{
+      margin: 10px 0 0;
+    }
+    .wrap-carousel .btn-primary{
+      font-size: 12px;
     }
     .top-menu{
         display: flex;
@@ -9260,6 +9301,10 @@
         align-items: center;
         color: #fff;
         padding: 0 15px;
+    }
+    .wrap-carousel .carousel-caption h1{
+      font-size: 15px;
+      line-height: 20px;
     }
     .top-menu a{color: #fff;padding: 10px 0;}
     .top-menu a i{margin-right: 5px;}
